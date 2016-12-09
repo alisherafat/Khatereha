@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+
+    <!--User preferences-->
+    <string name="p_username">p_username</string>
+    <string name="p_first_load">p_first_load</string>
+    <string name="p_contacts_loaded">p_contacts_loaded</string>
+</resources>

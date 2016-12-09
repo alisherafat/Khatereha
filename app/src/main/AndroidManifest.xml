@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.fanavard.alisherafat.khatereha">
+
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".app.MyApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- [START]  Active Android metadata -->
+        <meta-data
+            android:name="AA_DB_NAME"
+            android:value="khatereha.db"/>
+        <meta-data
+            android:name="AA_DB_VERSION"
+            android:value="2"/>
+        <meta-data
+            android:name="AA_MODELS"
+            android:value="com.fanavard.alisherafat.khatereha.app.models.Contact,com.fanavard.alisherafat.khatereha.app.models.Memory,com.fanavard.alisherafat.khatereha.app.models.Item"/>
+
+        <!-- [END] Active Android metadata -->
+
+        <activity android:name=".main.MainActivity">
+
+        </activity>
+        <activity android:name=".splash.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".contacts.AddEditContactActivity">
+        </activity>
+        <activity android:name=".profile.ProfileActivity">
+        </activity>
+        <activity android:name=".memories.AddEditMemoryActivity">
+        </activity>
+        <activity android:name=".result.ResultActivity">
+        </activity>
+        <activity android:name=".memories.MemoriesActivity">
+        </activity>
+        <activity android:name=".memories.single.MemoryActivity">
+        </activity>
+    </application>
+
+</manifest>
