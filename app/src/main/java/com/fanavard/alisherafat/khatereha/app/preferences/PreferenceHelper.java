@@ -32,7 +32,7 @@ public class PreferenceHelper {
     private String lastImagePath = "";
 
     private PreferenceHelper(Context context) {
-        preferences = PreferenceManager.getDefaultSharedPreferences(context);
+        preferences = PreferenceManager.getDefaultSharedPreferences(context.getApplicationContext());
         editor = preferences.edit();
     }
 
@@ -40,7 +40,7 @@ public class PreferenceHelper {
 
     public static PreferenceHelper getInstance(Context context) {
         if (instance == null || instance.get() == null) {
-            instance = new WeakReference<>(new PreferenceHelper(context.getApplicationContext()));
+            instance = new WeakReference<>(new PreferenceHelper(context));
         }
         return instance.get();
     }
